@@ -65,7 +65,7 @@ export class MenuScene extends Phaser.Scene
         this.add.image(140, 80, `menuUI`, `logo_pchujoy.png`).setScale(.72);
         */
 
-        let playButton = this.add.text(this.gameWidth/2, 890, 'JUGAR', { fontFamily: 'Montserrat', fontSize : 40, color: '#FFFFFF' }).setScale(.72);
+        let playButton = this.add.text(this.gameWidth/2, 890, 'JUGAR', { fontFamily: 'Montserrat', fontSize : 60, color: '#FFFFFF' }).setScale(.72).setOrigin(.5);
         playButton.setInteractive().on('pointerup', () => {
             this.nextSceneReady = false;
             this.showLoading();

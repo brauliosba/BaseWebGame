@@ -1,6 +1,7 @@
 //import {Panel} from '../components/panel.js';
 import {AnimationsManager} from '../managers/animationManager.js';
 import {AudioManager} from '../managers/audioManager.js';
+import {Panel} from '../components/panel.js'
 import * as Phaser from 'phaser';
 
 export class UIScene extends Phaser.Scene
@@ -36,7 +37,7 @@ export class UIScene extends Phaser.Scene
         this.animationsManager.createAnimations();
 
         this.panel = new Panel(this);
-        this.panel.create(this.gameWidth);
+        //this.panel.create(this.gameWidth);
         //this.panel.createInstructionsPanel(this.gameWidth);
         //this.panel.createOptionsPanel(this.gameWidth);
         //this.panel.createCreditsPanel(this.gameWidth);

@@ -83,7 +83,7 @@ export class MainScene extends Phaser.Scene{
                 }
                 else if (!this.blockStart) {
                     this.startTime = this.time.now * 0.001;
-                    this.uiScene.audioManager.playMusic();
+                    //this.uiScene.audioManager.playMusic();
                     this.isPaused = false;
                     this.gameState = 'play';
                     this.game.config.metadata.onGameStart({state:`game_start`, name:`game_name`});
