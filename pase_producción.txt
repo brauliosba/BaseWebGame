@@ -1,0 +1,38 @@
+base.js & prod.js
+-Borrar WebpackCopyPlugin
+
+index.js
+- declarar GA
+- Reemplazar const metadata ->
+// Set GA
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'G-MK9TTZTNT1');
+
+const metadata = {
+	highScore: opts?.highScore || 0,
+    sponsor: opts?.sponsor || false,
+    seasonId: opts?.seasonId || 0,
+    gameId: opts?.gameId || 0,
+    onGameStart: (evt) => {
+        // Run GA
+        gtag("event", "game_started");
+
+		// Run the optional callback
+		opts?.onGameStart(evt) || (() => { })()
+    },
+    onGameEnd: (evt) => {
+    	// Run GA
+        gtag("event", "game_finished");
+
+    	// Run the optional callback
+        opts?.onGameEnd(evt) || (() => { })();
+    },
+    onDataSend: opts?.onDataSend || (() => {}),
+};
+
+config.js
+- crear archivo
+
+-- cambiar todos los path de carga para que inicien con ${pchujoyPublicFilesPath}
