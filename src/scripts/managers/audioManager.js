@@ -16,7 +16,6 @@ export class AudioManager
 
         //sfx
         this.sfx = [];
-        this.driverSfx = [];
         this.addSFX();
         
         /*
@@ -66,12 +65,8 @@ export class AudioManager
 
     addSFX(){
         /*
-        let name = this.scene.sound.add(`name`, {
-            volume: .5,
-            loop: false
-        });
-        this.sfx.push(name);
-        this.chaufaChopsticks.push(name);
+        this.name = this.scene.sound.add(`name`, { volume: .5, loop: false });
+        this.sfx.push(this.name);
         */
     }
 
